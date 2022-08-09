@@ -7,7 +7,7 @@ import ProductDetails from './containers/ProductDetails'
 function App() {
   return (
     <div className="App ">
-   {/* <Header/> */}
+   <Header/>
 <div className='container'>
      <Routes>
      <Route path='/' element={<Productlisting/>}></Route>

@@ -11,7 +11,7 @@ const Productlisting = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.allProduct.products);
   // console.log(product)
-  const [id, title] = products;
+  // const [id, title] = products;
   const getData = async (res, err) => {
     await axios
       .get("https://fakestoreapi.com/products")
@@ -27,11 +27,11 @@ const Productlisting = () => {
   }, []);
 
   const renderList = products.map((product) => {
-    const { id, title, image, price, category,description } = product;
+    const { id, title, image, price, category } = product;
     return (
-      <div className="container d-flex " >
-      <div className="row ">
-        <div className="" key={id} >
+      <div className="container d-flex" key={product.id} >
+      <div className="row "  >
+        <div className="" >
           <Link to={`/product/${id}`}>
           <div className="card">
             <img src={image} className="card-img-top" alt="..." style={{width:400,height:400}}/>
